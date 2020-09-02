@@ -1,0 +1,64 @@
+img /* La bannière/titre */
+{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+}
+
+body /* J'ai besoin de l'expliqué lui ? */
+{
+    background-color: #3EE6C5;
+    font-family: sans-serif;
+}
+
+
+.onglet /* Défini les prpriétés générales des onglets */
+{
+    margin-top: 50px;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    height: 44px;
+    display:inline-block;
+    margin-left:3px;
+    margin-right:3px;
+    padding:3px;
+    cursor:pointer;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    user-select: none; /* Propriété standard */
+}
+.onglet:hover /* Action quand quelqu'un passe sa souris sur un onglet */ 
+{
+    background:#303030;
+}
+.onglet_0 /* Onglet en arrière-plan */
+{
+    background-color: #080808;
+    color: white;
+    font-size: 30px;
+}
+.onglet_1 /* Onglet sélectionné */
+{
+    background-color:#505050;
+    color: white;
+    border-bottom:0px solid black;
+    font-size: 30px;
+
+}
+.contenu_onglet /* Le texte contenu dans chaque onglet */
+{
+    margin-top:-1px;
+    padding:5px;
+    display:none;
+}
+
+#blackBox
+{
+
+    background-color: #080808;
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 100.85%;
+    height: 100px;
+}

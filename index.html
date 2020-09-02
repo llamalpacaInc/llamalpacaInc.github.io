@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"> <!--Le premier à mettre "fr" ici est un homme mort-->
+<head>
+    <!--Setup des bases, dans l'ordre : 
+        -Jquery, pour le Javascrpit (c'est une library INDISPENSABLE)
+        -La mise en place de l'encodage ASCII (je crois, en vrai je suis pas sur mais UTF-8 quoi, tu les veux tes accents ou pas ?)
+        -L'importation du CSS
+        -L'importation du Javascript-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="text/javascript" src="Script/javascript.js"></script>
+
+    <link rel="icon" href="CSS/Images/favicon.png">
+    
+    <title>Llamalpaca</title>
+
+</head>
+<body>
+
+    
+
+
+    <div id="blackBox">
+        <!--Tous les onglets : 
+            -Accueil
+            -Pew Pew
+            -Conquert, my child !
+            -Qui suis-je
+            --->
+        <span class="onglet_0 onglet" id="onglet_accueil" onclick="javascript:change_onglet('accueil');">Accueil</span>
+        <span class="onglet_0 onglet" id="onglet_PewPew" onclick="javascript:change_onglet('PewPew');">Pew Pew</span>
+        <span class="onglet_0 onglet" id="onglet_CMC!" onclick="javascript:change_onglet('CMC!');">Conquert, my child !</span>
+        <span class="onglet_0 onglet" id="onglet_quiSuisJe" onclick="javascript:change_onglet('quiSuisJe');">Qui suis-je ?</span>
+    </div>
+
+    
+    
+    <!--Contenu correspondant aux onglets, ici c'est pour l'onglet ACCUEIL-->
+    <div class="contenu_onglet" id="contenu_onglet_accueil">            
+        <object type="text/html" data="accueil.html" width="100%" height="600px"></object>
+    </div>
+
+    <!--Contenu correspondant aux onglets, ici c'est pour l'onglet PEW PEW-->
+    <div class="contenu_onglet" id="contenu_onglet_PewPew">      
+        <object type="text/html" data="PewPew.html" width="100%" height="1000px"></object>
+    </div>
+
+    <!--Contenu correspondant aux onglets, ici c'est pour l'onglet CONQUERT, MY CHILD !-->
+    <div class="contenu_onglet" id="contenu_onglet_CMC!">           
+        <object type="text/html" data="CMC.html" width="100%" height="600px"></object>
+    </div>
+
+    <!--Contenu correspondant aux onglets, ici c'est pour l'onglet QUI SUIS-JE-->
+    <div class="contenu_onglet" id="contenu_onglet_quiSuisJe">             
+        <object type="text/html" data="quiSuisJe.html" width="100%" height="600px"></object>
+    </div>
+
+
+    
+    
+    <script type="text/javascript"> //Fait en sorte que la page d'accueil soit justement l'accueil
+        var anc_onglet = 'accueil';
+        change_onglet(anc_onglet);
+    </script>
+
+</body>
+<!--Créé par Anatrolll, script des onglets par Ybouane-->
+</html>
