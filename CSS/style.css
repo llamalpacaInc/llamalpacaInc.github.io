@@ -1,3 +1,26 @@
+.date /* Class à mettre à chaque date de news */
+{
+    color: #505050;
+    margin-bottom: -10px;
+}
+
+.newsTitle /* Class à mettre au titre de chaque news */
+{
+    margin-top: -5px;
+}
+
+#titleUp
+{
+    color: white;
+    margin-left: 88.5%;
+    font-size: 40px;
+}
+
+h1 /* le titre h1 */
+{
+    font-size: 60px;
+}
+
 img /* La bannière/titre */
 {
     width: 95%;
@@ -14,7 +37,7 @@ body /* J'ai besoin de l'expliqué lui ? */
 
 .onglet /* Défini les prpriétés générales des onglets */
 {
-    margin-top: 50px;
+    margin-top: 5px;
     border-left: 3px solid white;
     border-right: 3px solid white;
     height: 44px;
