@@ -21,6 +21,16 @@ h1 /* le titre h1 */
     font-size: 60px;
 }
 
+h2 
+{
+    font-size: 30px
+}
+
+h3
+{
+    font-size: 20px
+}
+
 img /* La bannière/titre */
 {
     width: 95%;
