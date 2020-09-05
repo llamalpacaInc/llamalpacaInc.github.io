@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head> 		
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/style.css">
+	<script type="text/javascript" src="Javascript/javascriptHTE.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<table>
+		<td>
+			<p id="inputTD">
+				<button onclick="removeLast()"> Enlever le dernier champ</button>
+				<button onclick="addIntro()"> Ajouter l'intro </button>
+				<button onclick="addInputP()"> Ajouter un paragraphe </button>
+				<button onclick="addInputH1()"> Ajouter un titre h1 </button>
+				<button onclick="addInputH2(false)"> Ajouter un titre h2 </button>
+				<button onclick="addInputH3()"> Ajouter un titre h3 </button>
+				<button onclick="addInputDate(false)"> Ajouter la date </button>
+				<button onclick="addLine()"> Ajouter une ligne </button>
+				<button onclick="addBold()"> Gras </button>
+				<button onclick="addItalic()"> Italique </button>
+				<button onclick="addUnderline()"> Souligner </button>
+				<button onclick="showHTML()"> Afficher HTML </button>
+			</p>
+		</td>
+		<td id="outputTD">
+			<p id="toPrintPreview">Ajoutez un champ et commencez à écrire pour voir la prévisualisation</p>
+			<div id="space"></div>
+			<p id="toPrintRaw">Ajoutez un champ pour voir l'HTML</p>
+		</td>
+	</table>
+	
+	
+</body>
+</html>
