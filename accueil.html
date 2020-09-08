@@ -10,8 +10,59 @@
 
     <h1>News :</h1>
 
+    <!--=========================================POST DU 8 SEPTEMBRE 2020=========================================-->
+    <p class='date'>8/09/2020</h1>
+    <hr color='#505050' width=750 align='left'>
+    <h2 class='newsTitle'>Conquert, my Child !</h2>
+    <p>--- Bon je suis en retard sur ces news étant donné que j'était sensé les poster le week-end précédent. Voici donc un résumé du DevLog de <i>Conquert, my Child</i> que je tiens mon ordinateur :</p>
 
-    <!--=========================================POST DU 3 SPETEMBRE 2020=========================================-->
+    <h3>24 juillet 2020 </h3>
+    <p>--- Début du projet, création de la scène prototype. <br/> Ca faisait longtemps que je bossais sur les sprites du jeu sans avoir aucune idée du format du jeu : 2D vu de côté, 2D vu de dessus, ou 2D isométrique. Mais finalement je me suis dit qu'une vue de côté ça serais plus adaptée et ça changera du projet précédent <i>Pew Pew</i>.
+    </p>
+    <p>--- J'ai importé les premières versions des sprites du joueur puis j'ai vite fait un décors pour faire un terrain de test, et un rectangle cyan pour l'arme (qui n'a pas encore de nom, elle s'appellera donc "weapon" pour l'instant). Puis j'ai fait en sorte que le weapon tourne autour du joueur en suivant la souris (du recyclage de code de <i>Pew Pew</i>) et j'ai récupéré le script de déplacement du joueur du tutoriel 2D de la chaîne Youtube <i>Tuto Unity fr</i>, ensuite j'ai fait en sorte de pouvoir lancer le weapon comme une lance mais j'ai rencontré un bug, le weapon ne détectait pas la collision avec le terrain, mais il était déjà minuit donc je suis parti me coucher.</p>
+    
+    <h3>25 juillet 2020</h3>
+    <p>--- J'ai repris vers 14H et enfin résolu le bug de la veille, il fallait juste lui ajouter un rigibody2D pour détecter le terrain, mais le piège qui ne m'a pas facilité la tache c'est qu'il détectait les collisions avec le player, ma théorie est donc qu'il faut qu'au moins l'un des deux GameObject dont on veut détecter la collision doit avoir un rigibody2D pour que la détection marche. Ensuite j'ai ajouté le système pour rappeler le weapon puis le système de dash quand le weapon lancé ou planté dans le mur.</p>
+    <p>--- Après une petite pause j'ai fait un modèle temporaire pour les ennemis puis j'ai commencé à coder l'IA (pour l'instant c'est un meuble qui tire des balles à des intervalles régulières)</p>
+    
+    <h3>26 juillet 2020</h3>
+    <p>--- J'ai commencé vers 13H20 (il est 16H actuellement) et j'ai complètement laissé tombé l'IA pour l'instant, j'avais d'autres plans en tête : je voulais avoir le Dash de fait, j'ai donc écrit un petit code très moche pour améliorer dash à gauche et à droite, mais c'était vraiment nul, j'ai donc ajouté les dash en haut et en bas puis j'ai tout arrêté pour faire un Trello du projet et avoir une idée sur quoi faire et quand, ça m'a prit pas mal de temps mais je pense que ça en vaut la peine. Après ça j'ai repris les dash et j'ai ajouté les diagonales ainsi que le reset du momentum de la chute lorsque l'on dash (ça évite d'avoir une vitesse de chute folle quand on abuse du dash vers le haut), mais mon code était de pire en pire, alors j'ai passé pas mal de temps à le rendre plus optimisé et plus joli, et j'en ai profité pour polir encore plus la fonctionnalité pour permettre le joueur de faire des mouvementent en apparence impossible dans le code de base, comme se rattraper de justesse sur un coin avec les dash diagonal vers le haut.</p>
+    <p>--- Ensuite je me suis attaqué à la résolution de bugs, j'ai donc (très) facilement résolu le problème du Raycast dans la hitbox du joueur (j'avais passé le joueur dans la layer "ignore Raycast", mais c'est pas optimal pour de futurs ennemis qui auraient besoins de voir le joueur via des Raycasts). J'ai aussi rajouté le fait que la hitbox du Weapon change en fonction du mode dans lequel il est (c'est pas vraiment un bug mais je l'ai mit dans la catégorie quand meme, je suis un fou moi). Et pour finir j'ai résolu le bug qui faisait que le joueur se bloquait sur le terrain des fois et l'empêchait d'avancer (ce qui est embêtant, on va pas se le cacher). Tout cela a rendu le jeu plus fun (même si y'a pas de gameplay) et plus fini, je suis donc content, je m'en vais désormais goûter (j'ai pas déjeuné ni petit-déjeuné), puis je me lancerais dans le système de pooint de vie.</p>
+    <p>--- Système de vie (presque) fait, pour l'instant c'est juste pour les test, par exemple quand le joueur meurt il disparaît et faut relancer la scène pour recommencer !</p>
+    
+    <h3>27 juillet 2020</h3>
+    <p>--- J'ai commencé vers 13H30 et j'ai assez peu programmé, par contre grâce à l'aide de mon frère j'ai pu trouver un système (pas encore 100% opérationnel) pour rendre l'évitement des balles plus facile et pour donner plus de contrôle en permettant au joueur de rester immobile en l'air le temps de recharger un autre dash, ça permet de faire 2 dash en l'air et d'aller plus haut. Mais j'ai pas plus travaillé sur le projet.</p>
+    <p>--- Durant la nuit, j'ai beaucoup réfléchit au jeu et je l'ai remit entièrement en question, allant même jusqu’à penser à en faire un topdown shooter. Toute cette cogitation m'a mené à la conclusion qu'il fallait retravailler les sprites du joueur pour lui donner un aspect plus carré ou rond, car le joueur actuellement est un piquet, ce qui ne sert pas beaucoup le gameplay, et ma philosophie de développeur est "toujours servir le gameplay". J'ai donc eu l'idée de m'éloigner du côté robot du joueur pour avoir une approche plus magique, ce qui sera plus simple pour aborder les capacités de celui-ci avec un "ta gueule c'est magique", il ne me reste plus qu'un point à trouver, quelle forme aura le personnage, quels traits aura-t-il pour être mémorable.</p>
+    
+    <h3>28 juillet 2020</h3>
+    <p>--- J'ai commencé vers 13H30 (comme à chaque fois, c'est parce que c'est l'heure à laquelle je me lève) et j'ai directement lancé Aseprite pour travailler sur un nouveau joueur qui correspond à mes idées de la nuit, après environ deux heure j'avais un design, je l'ai donc importé dans Unity mais il fit pas trop (et en plus il est pas très beau) donc je suis repartit pour refaire un autre design et espérer qu'il soit plus joli et qu'il correspond plus à mes espérances.</p>
+    <p>--- Après avoir retravaillé le design j'ai enfin trouvé quelque chose que me satisfaisait, je me suis donc attaqué aux animation de marche, attente, et arrêt en l'air, après avoir passé 4Havec les triggers d'animations j'ai enfin tout qui marche.</p>
+    
+    <h3>29 juillet 2020</h3>
+    <p>--- J'ai repris à 12H et je me suis mit à retravailler le dash qui était un peu buggé, et bien une heure plus tard il l'est encore plus, mais cette fois le code n'a ni queue ni tête. Après une pause à 14H30 pour manger j'ai repris le débugging pour au final avoir un code incompréhensible même par moi à cause de la tonne de bool dans les conditions pour au final ne pas résoudre le bug et uniquement le rendre moins facile à trouver, mais bon j'en ai marre donc je le laisse, même moi le connaissant et en connaissant les raisons de celui-ci j'y arrive une fois sur dix, donc un un joueur lambda n'a aucune chance de le trouver et de l'exploiter. Il est 16H40 et je prends une pause. Après dîner, mon frère est venu m'aider pour trouver des bugs et tester le gameplay, il a trouvé un bug mineur que j'ai fixé avec une seule ligne de code et c'était fini pour aujourd'hui.</p>
+    
+    <h3>30 juillet 2020</h3>
+    <p>--- J'ai commencé à 14H45 et j'ai directement attaqué un point très important du jeu, l'animation de dash, parce que actuellement c'est juste une téléportation, donc après quelques recherches et beaucoup d'essais j'ai eu enfin une animation qui marche (quand je parle d'animation je parle de la translation partant du joueur vers la position d'arrivé du dash). J'ai aussi retenté *encore* de débugger le dash (ça n'en fini jamais), et malgrès tous ces jours à bosser dessus, le script n'est pas parfait mais il fait le job, et comme le dise les jeunes : ain't much but it's honest work. </p>
+    <p>--- Il ne me reste plus que les particules pour faire la traînée du dash et le prototype sera fini. J'ai commencé mon approche en faisant des recherches sur le particle system de Unity dont je n'entends que du bien, mais dommage ça ne marche qu'avec des GameObject immobiles (ou alors les particules bougent avec lui, ce qui n'est pas ce que je cherche), je me suis donc trouvé obligé de créer mes propres "particules" avec un prefab et un script qui les rétrécit sur la durée puis les détruits. Ca m'a prit encore un peu de temps mais j'ai réussi à le faire et c'est plutôt compacte et modulable, et ça j'aime.</p>
+    <p>--- Il est actuellement 19H, et j'annonce que le prototype est fini en 5 jours de code intensifs et plusieurs jours de plus pour décider des graphisme et du Gameplay. Demain je pars en vacances et j'en profiterai pour travailler les premiers niveaux et l'histoire.</p>
+    
+    <h3>1 septembre 2020</h3>
+    <p>--- Aujourd'hui c'était la rentrée donc à partir de maintenant j'aurais moins de temps pour travailler sur ce projet. Sinon à part ça j'ai commencé à faire le patron du niveau 1 (oui j'avais dit que je le ferais pendant les vacances mais bon, tant pis) sur Krita et je pense que ma première version est déjà bien, il faut juste l'agrandir maintenant.</p>
+    
+    <h3>7/8 septembre 2020</h3>
+    <p>--- Je retourne enfin au développement de Conquert, my Child après une pause assez grande le temps de mettre en place ce site. Sinon pendant les deux jours mentionnés dans le titre j'ai travaillé sur la TileMap du sol du niveau 1 et j'en suis satisfait.</p>
+
+
+
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!--=========================================POST DU 3 SEPTEMBRE 2020=========================================-->
     <p class='date'>3/09/2020</h1>
     <hr color='#505050' width=750 align='left'>
     <h2 class='newsTitle'>HTML Text Editor</h2>
